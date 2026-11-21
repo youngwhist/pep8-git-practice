@@ -7,3 +7,8 @@ def max_value(numbers) :
     for n in numbers:
         if n>result:result=n
     return result
+def min_value(numbers):
+    result=numbers[0]
+    for n in numbers:
+        if n<result:result=n
+    return result
