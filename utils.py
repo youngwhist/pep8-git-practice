@@ -1,14 +1,26 @@
-import os,sys
+"""Вспомогательные функции для статистики оценок."""
+
+
 def average(numbers):
-    if len(numbers)==0: return 0
-    return sum(numbers)/len(numbers)
-def max_value(numbers) :
-    result=numbers[0]
+    """Среднее значение; для пустого списка — 0."""
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
+
+
+def max_value(numbers):
+    """Наибольшее значение списка."""
+    result = numbers[0]
     for n in numbers:
-        if n>result:result=n
+        if n > result:
+            result = n
     return result
+
+
 def min_value(numbers):
-    result=numbers[0]
+    """Наименьшее значение списка."""
+    result = numbers[0]
     for n in numbers:
-        if n<result:result=n
+        if n < result:
+            result = n
     return result
